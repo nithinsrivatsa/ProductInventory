@@ -1,0 +1,41 @@
+# dependencies
+
+/ProductInventoryAPI/.vs
+/ProductInventoryAPI/.sonarlint
+*.dll*
+
+/ProductInventoryAPI/ProductInventoryAPI/bin
+/ProductInventoryAPI/ProductInventoryAPI/obj
+
+/ProductInventoryAPI/ProductInventoryAPI/appsettings.Development.json
+/ProductInventoryAPI/ProductInventoryAPI/Properties/launchSettings.json
+
+# Ignore build outputs
+bin
+obj
+*.exe
+*.dll
+*.pdb
+*.so
+*.dylib
+*.lib
+
+# Ignore Visual Studio and Rider IDE files
+.vs/
+.idea/
+*.user
+*.suo
+*.sln.cache
+*.csproj.user
+
+# Ignore Logs and Debugging Files
+*.log*
+*.nlog
+*.tlog
+*.cache
+*.out
+build/
+/coverage
+
+# dependency file for snapshots related test cases
+__snapshots__/
