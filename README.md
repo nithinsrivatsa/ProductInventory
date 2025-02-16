@@ -20,11 +20,11 @@ Ensure you have the following installed:
 ## Installation
 ### Clone the Repository
 ```sh
-git clone https://github.com/your-repo/product-inventory-api.git
+git clone https://github.com/nithinsrivatsa/ProductInventory
 cd ProductInventoryAPI
 ```
 ### Configure Database
-1. Update the `appsettings.json` file with your database connection string:
+1. Update the `appsettings.json` file with database connection string: (Use localhost or any Server)
   ```json
   "ConnectionStrings": {
     "DefaultConnection": "Server=localhost;Database=ProductInventory;Trusted_Connection=True;TrustServerCertificate=True;MultipleActiveResultSets=true;encrypt=false;"
@@ -59,6 +59,13 @@ This will open the **Swagger UI**, where you can test the API endpoints.
 |--------|----------------------|----------------------|
 | PUT    | /api/products/add-to-stock/{id}/{quantity}      | Increment the stock with quantity by Id  |
 | PUT   | /api/products/decrement-stock/{id}/{quantity}      | Decrement the stock with quantity by Id  |
+### Code Quality and Formatting
+* EditorConfig: 
+The project includes an .editorconfig file to ensure consistent code formatting across different development environments. It automatically enforces indentation, spacing, and other style rules.
+* StyleCop: 
+We use StyleCop to enforce coding standards and add file headers. All new files should include the header.
+### Product ID Generation
+The Product ID generator ensures unique IDs based on the current timestamp and a node identifier. It prevents duplicate IDs by using a sequence counter for milliseconds with high-frequency requests. The generator restricts the number of instances and follows a structured approach to avoid collisions. The final product ID is a computed value derived from the timestamp and a base offset, ensuring uniqueness within the defined range.
 ## Contributing
 1. Fork the repository.
 2. Create a new branch (`feature-branch`).
